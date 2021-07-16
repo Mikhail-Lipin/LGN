@@ -1,0 +1,29 @@
+#!/bin/bash
+
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_1c_1.txt 0.2 -o CubeLRN_s05_3P_1c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_2c_1.txt 0.2 -o CubeLRN_s05_3P_2c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_3c_1.txt 0.2 -o CubeLRN_s05_3P_3c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_4c_1.txt 0.2 -o CubeLRN_s05_3P_4c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_5c_1.txt 0.2 -o CubeLRN_s05_3P_5c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_6c_1.txt 0.2 -o CubeLRN_s05_3P_6c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_7c_1.txt 0.2 -o CubeLRN_s05_3P_7c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_8c_1.txt 0.2 -o CubeLRN_s05_3P_8c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_9c_1.txt 0.2 -o CubeLRN_s05_3P_9c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_10c_1.txt 0.2 -o CubeLRN_s05_3P_10c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_11c_1.txt 0.2 -o CubeLRN_s05_3P_11c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_12c_1.txt 0.2 -o CubeLRN_s05_3P_12c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_13c_1.txt 0.2 -o CubeLRN_s05_3P_13c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_14c_1.txt 0.2 -o CubeLRN_s05_3P_14c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_15c_1.txt 0.2 -o CubeLRN_s05_3P_15c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_16c_1.txt 0.2 -o CubeLRN_s05_3P_16c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_17c_1.txt 0.2 -o CubeLRN_s05_3P_17c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_18c_1.txt 0.2 -o CubeLRN_s05_3P_18c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_19c_1.txt 0.2 -o CubeLRN_s05_3P_19c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_20c_1.txt 0.2 -o CubeLRN_s05_3P_20c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_21c_1.txt 0.2 -o CubeLRN_s05_3P_21c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_22c_1.txt 0.2 -o CubeLRN_s05_3P_22c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_23c_1.txt 0.2 -o CubeLRN_s05_3P_23c_1.nii.gz
+c3d SC05_T_RLGN.nii.gz -region 0x0x0vox 22x22x22vox -resample 200x200x200% -scale 0 -landmarks-to-spheres CubeLRN_s05_3P_24c_1.txt 0.2 -o CubeLRN_s05_3P_24c_1.nii.gz
+
+
+

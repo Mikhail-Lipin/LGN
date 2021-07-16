@@ -1,0 +1,35 @@
+#!/bin/bash
+
+export PATH="/Applications/ITK-SNAP.app/Contents/bin/":$PATH
+
+SN="DSC_output.txt"
+ListVar=$(cat $1)
+
+if [[ -z "$1" ]]
+then
+	echo "Correct usage is ./DSC ListOfSegmentations.txt"
+	echo -e "The script takes the input argument, and adds the processed data to a file "$SN"\n\007"
+else
+	printf "List of segmentations has been taken from\t=\t$1\t\n" >> "$SN"
+
+#	unset SeqKey Proc SessTime SessDate Exper KeyPr ReacTime SeqWOSpace SeqWSpace a0 a1 a2 a3 disambSmall disambMedium disambLarge 
+		
+	ImageRef=$(echo "$ListVar" | awk 'NR==1, NR==1 {print $NF}')
+	VoxSumRef=$(c3d "$ImageRef" -voxel-sum | cut -f3 -d' ')
+	printf "The reference image is\t=\t$ImageRef\t\n" >> "$SN"
+	printf "The voxel count in the reference image is\t=\t$VoxSumRef\t\n" >> "$SN"
+	printf " \nThe compared image\tThe number of voxels\tThe number of common voxels\tDSC\n" >> "$SN"
+	LineCount=$((0+`echo "$ListVar" | wc -l`))
+	for ((i = 1; i <= $LineCount; i += 1))
+	do
+		ImageComp=$(echo "$ListVar" | awk 'NR=='$i', NR=='$i' {print $NF}')
+		VoxSumComp=$(c3d "$ImageComp" -voxel-sum | cut -f3 -d' ')
+		c3d $ImageRef $ImageComp -multiply -o x.nii.gz
+		VoxSumMult=$(c3d x.nii.gz -voxel-sum | cut -f3 -d' ')
+#		DSCvalue=$(echo "scale=4; ($VoxSumMult+$VoxSumMult)/($VoxSumRef+$VoxSumComp)" | bc)
+		DSCvalue=$(echo "scale=4; ($VoxSumMult+$VoxSumMult)/($VoxSumRef+$VoxSumComp)" | bc)
+		printf "$ImageComp\t$VoxSumComp\t$VoxSumMult\t$DSCvalue\n" >> "$SN" # this is line 30
+	done
+fi
+printf "The processing has been finished. Find the results in "$SN"\n"
+printf "\007\007"
