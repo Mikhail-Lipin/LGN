@@ -15,7 +15,7 @@ else
 	printf "The reference image is\t=\t$ImageRef\t\n" >> "$SN"
 	printf "The voxel count in the reference image is\t=\t$VoxSumRef\t\n" >> "$SN"
 	printf " \nThe compared image\tThe number of voxels\tThe number of common voxels\tDSC\n" >> "$SN"
-	LineCount=$((0+`echo "$ListVar" | wc -l`))
+	LineCount=$(`echo "$ListVar" | wc -l`)
 	for ((i = 1; i <= $LineCount; i += 1))
 	do
 		ImageComp=$(echo "$ListVar" | awk 'NR=='$i', NR=='$i' {print $NF}')
