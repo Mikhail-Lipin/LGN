@@ -10,9 +10,6 @@ then
 	echo -e "The script takes the input argument, and adds the processed data to a file "$SN"\n\007"
 else
 	printf "List of segmentations has been taken from\t=\t$1\t\n" >> "$SN"
-
-#	unset SeqKey Proc SessTime SessDate Exper KeyPr ReacTime SeqWOSpace SeqWSpace a0 a1 a2 a3 disambSmall disambMedium disambLarge 
-		
 	ImageRef=$(echo "$ListVar" | awk 'NR==1, NR==1 {print $NF}')
 	VoxSumRef=$(c3d "$ImageRef" -voxel-sum | cut -f3 -d' ')
 	printf "The reference image is\t=\t$ImageRef\t\n" >> "$SN"
