@@ -1,6 +1,6 @@
 #!/bin/bash
 # 1st argument is xcentral, 2nd is ycentral, 3rd is zcentral, 4th is the name of the file without .nii.gz, 5th is R (right) or L (left)
-export PATH="/Applications/ITK-SNAP.app/Contents/bin/":$PATH
+#export PATH="/Applications/ITK-SNAP.app/Contents/bin/":$PATH
 printf "\nThe processing of $4.nii.gz has been started\n"
 
 a=$(($1-12))
