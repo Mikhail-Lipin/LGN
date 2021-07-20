@@ -1,6 +1,5 @@
 #!/bin/bash
-
-export PATH="/Applications/ITK-SNAP.app/Contents/bin/":$PATH
+#export PATH="/Applications/ITK-SNAP.app/Contents/bin/":$PATH
 
 SN="DSC_output.txt"
 ListVar=$(cat $1)
@@ -26,7 +25,6 @@ else
 		VoxSumComp=$(c3d "$ImageComp" -voxel-sum | cut -f3 -d' ')
 		c3d $ImageRef $ImageComp -multiply -o x.nii.gz
 		VoxSumMult=$(c3d x.nii.gz -voxel-sum | cut -f3 -d' ')
-#		DSCvalue=$(echo "scale=4; ($VoxSumMult+$VoxSumMult)/($VoxSumRef+$VoxSumComp)" | bc)
 		DSCvalue=$(echo "scale=4; ($VoxSumMult+$VoxSumMult)/($VoxSumRef+$VoxSumComp)" | bc)
 		printf "$ImageComp\t$VoxSumComp\t$VoxSumMult\t$DSCvalue\n" >> "$SN" # this is line 30
 	done
