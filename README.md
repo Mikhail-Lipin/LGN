@@ -3,8 +3,7 @@
 The prerequisites for the image processing are installed IgorPro and ITK-SNAP software.
 
 1. Open command line window (macOS), go to the folder with NIFTI MRI images, set a path for c3d plugin in ITK-SNAP software (e.g., export PATH="/Applications/ITK-SNAP.app/Contents/bin/":$PATH). Copy shell script 3D_to_1D to this folder, and grant it executive privilege with command chmod.
-2. Open MRI image in ITK-SNAP. Identify the center of LGN (in a sagittal slice). Run the script 3D_to_1D with five arguments. The 1st, 2nd, and 3rd arguments are the x-, y-, and z-coordinates of the LGN center. The 4th argument is the name of the image file without extension ".nii.gz". The 5th argument is either R (right LGN), or L (left LGN). For example: ./3D_to_1D  120 120 120 MRimage R
-The outputs of the shell script are the text file MRimage_R.txt and 22x22x22 excise of LGN containing image.
+2. Open MRI image in ITK-SNAP. Identify the center of LGN (in a sagittal slice). Run the script 3D_to_1D with five arguments. The 1st, 2nd, and 3rd arguments are the x-, y-, and z-coordinates of the LGN center. The 4th argument is the name of the image file without extension ".nii.gz". The 5th argument is either R (right LGN), or L (left LGN). For example: ./3D_to_1D  120 120 120 MRimage R . The outputs of the shell script are the text file MRimage_R.txt and 22x22x22 excise of LGN containing image.
 3. Open IgorPro experiment EdgeEnhancement.pxp in IgorPro. A permanent link for downloading IgorPro experiment EdgeEnhancement.pxp is here:
 https://drive.google.com/drive/folders/1zTe98Gw6bCtnQUJpOLICDqUQEz1Rieec?usp=sharing . In menu Data => Load Waves => Load Delimited Text   load file MRimage_R.txt and save it as MRimage_R
 4. In IgorPro command line, run Ar2Im(MRimage_R). The output will be the 3D 22x22x22 image with the name of MRimage_R_Im. Type this name into the table ImName. The table ImName may contain as many 3D images as you want to run at once in the next step.
