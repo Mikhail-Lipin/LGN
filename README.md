@@ -14,3 +14,4 @@ https://drive.google.com/drive/folders/1zTe98Gw6bCtnQUJpOLICDqUQEz1Rieec?usp=sha
 where x.nii.gz is the image resulted from execution of 3D_to_1D in the step 2,
 xx.txt is the name of the text image resulted from Im2Ar(ImageName) in IgorPro command line in the previous step,
 xxx.nii.gz is the desired name of 44x44x44 LGN containing image representing edge-enhanced and upsampled version of the original LGN-containing image.
+8. The shell script DSC calculates the Dice Similarity Coefficient between the delineation listed first in the text file (the input argument of the script), and all other listed delineations. For example, running ./DSC list.txt takes the segmentation listed first in the text file list.txt, and calculates its DSC with all other listed segmentations. The script DSC generates output text file that can be opened with Microsoft Excel.
